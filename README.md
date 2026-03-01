@@ -187,6 +187,13 @@ dl,all,,uz,0.02
 allsel
 ```
 
+Vykresleni okrajovych podminek na usecku
+```
+mapdl.run("lsel,s,loc,x,length")
+mapdl.run("/pbc,all,,2")
+mapdl.run("lplot")
+```
+
 # Material
 
 ```
