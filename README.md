@@ -224,3 +224,10 @@ Uložení ID posledního přidaného objemu
 block, 0,length,0,width,0,height
 *get,block_id,volu,0,num,max
 ```
+Velikost obrazku v Jupyteru
+```
+from IPython.display import display, HTML
+mapdl.gfile(1200)
+display(HTML("<style>img { width: 100% !important; }</style>"))
+mapdl.plnsol("S","XZ")
+```
