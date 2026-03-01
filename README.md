@@ -216,3 +216,11 @@ mapdl.allsel(mute=True)
 num, ux = result.nodal_solution(0, "UX", nsel)
 np.nanmin(ux[:,0]), np.nanmax(ux[:,0])
 ```
+
+# Dalsi
+
+Uložení ID posledního přidaného objemu
+```
+block, 0,length,0,width,0,height
+*get,block_id,volu,0,num,max
+```
