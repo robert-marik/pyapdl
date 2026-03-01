@@ -231,3 +231,8 @@ mapdl.gfile(1200)
 display(HTML("<style>img { width: 100% !important; }</style>"))
 mapdl.plnsol("S","XZ")
 ```
+
+Contours
+```
+mapdl.contour(1,10,-5e6,"",5e6)
+```
