@@ -195,3 +195,16 @@ mapdl.mp("PRYZ", 1, pr_yz)
 mapdl.mp("PRXZ", 1, pr_xz)
 mapdl.mp("DENS", 1, density)
 ```
+
+# Postprocessing
+
+```
+
+# select all nodes on x=a and get the x-displacement
+result = mapdl.result
+mapdl.nsel("S", "LOC", "X", a)
+nsel = mapdl.mesh.nnum.tolist()
+mapdl.allsel(mute=True)
+num, ux = result.nodal_solution(0, "UX", nsel)
+np.nanmin(ux[:,0]), np.nanmax(ux[:,0])
+```
