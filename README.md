@@ -217,6 +217,15 @@ num, ux = result.nodal_solution(0, "UX", nsel)
 np.nanmin(ux[:,0]), np.nanmax(ux[:,0])
 ```
 
+Postprocessing v Pythonu
+```
+displacements = mapdl.post_processing.nodal_displacement("y")
+displacements.max()
+```
+```
+mapdl.post_processing.nodal_component_stress("XY")
+```
+
 # Dalsi
 
 Uložení ID posledního přidaného objemu
