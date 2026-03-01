@@ -14,7 +14,15 @@ with open("geometry.mac") as f:
 mapdl.input_strings(data);
 ```
 
+Ulozeni
+```
+mapdl.save("/home/marik/work/ansys/beam_with_holes/data.db")
+```
 
+Obnoveni
+```
+mapdl.restore("/home/marik/work/ansys/beam_with_holes/data.db")
+```
 
 # Kresleni
 
