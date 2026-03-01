@@ -187,7 +187,7 @@ dl,all,,uz,0.02
 allsel
 ```
 
-Vykresleni okrajovych podminek na usecku
+Vykresleni okrajovych podminek na usecku (2=znacky+hodnoty, 1=znacky)
 ```
 mapdl.run("lsel,s,loc,x,length")
 mapdl.run("/pbc,all,,2")
