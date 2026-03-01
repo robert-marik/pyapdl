@@ -149,6 +149,35 @@ mapdl.allsel(mute=True)
 mapdl.eplot(savefig="geom.png")
 ```
 
+Okrajove podminky v APDL
+```
+! ==============================
+! 1) Levá dolni hrana fixně (osa z dolu)
+! ==============================
+
+lsel,s,loc,x,0
+lsel,r,loc,z,vyska
+dl,all,,uz,0   ! žádný posun svisle
+dl,all,,ux,0   ! žádný posun podel
+dl,all,,uy,0   ! žádný posun do šířky
+allsel
+
+! ==============================
+! 2) Pravá stěna – zákaz UX
+! ==============================
+asel,s,loc,x,delka
+da,all,ux,0
+allsel
+
+! ==============================
+! 3) Horní hrana pravé stěny – posun dolů
+! ==============================
+lsel,s,loc,x,delka
+lsel,r,loc,z,0
+dl,all,,uz,0.02
+allsel
+```
+
 # Material
 
 ```
