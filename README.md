@@ -5,6 +5,17 @@ Spuštěni
 from ansys.mapdl.core import launch_mapdl
 mapdl = launch_mapdl(transport_mode="insecure")
 ```
+Jina varianta spusteni
+```
+from ansys.mapdl.core import launch_mapdl
+import os
+path = os.getcwd() + "/ansys_files"
+mapdl = launch_mapdl(transport_mode="insecure", nproc=10,
+                    run_location=path, additional_switches='-smp', override=True, 
+                    )
+mapdl.ignore_errors = True
+```
+
 
 Načtení a spuštění souboru
 ```
@@ -251,4 +262,9 @@ mapdl.plnsol("S","XZ")
 Contours
 ```
 mapdl.contour(1,10,-5e6,"",5e6)
+```
+
+Test konvergence
+```
+mapdl.solution.converged
 ```
