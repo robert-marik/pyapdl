@@ -293,3 +293,8 @@ Skalarni parametry
 ```
 mapdl.starstatus()
 ```
+nebo 
+```
+for name in mapdl.parameters:
+    print(f"{name} =  {mapdl.parameters[name]}")
+```
