@@ -289,3 +289,7 @@ nebo
 print(mapdl.run("NLIST,6932"))
 ```
 
+Skalarni parametry
+```
+mapdl.starstatus()
+```
