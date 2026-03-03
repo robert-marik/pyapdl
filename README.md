@@ -268,3 +268,24 @@ Test konvergence
 ```
 mapdl.solution.converged
 ```
+
+Vypis všech komponent
+```
+mapdl.cmlist("ALL")
+```
+
+Nalezení souřadnic pro node podle id
+```
+x = mapdl.get("XNODE", "NODE", 6932, "LOC", "X")
+y = mapdl.get("YNODE", "NODE", 6932, "LOC", "Y")
+z = mapdl.get("ZNODE", "NODE", 6932, "LOC", "Z")
+
+print(x, y, z)
+```
+
+nebo 
+
+```
+print(mapdl.run("NLIST,6932"))
+```
+
